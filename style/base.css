@@ -1,0 +1,57 @@
+body {
+	display: flex;
+    	flex-direction: column;
+     	gap: 0.1em;
+      	background: black;
+}
+
+h1 {
+	border-style: solid;
+    background: white;
+}
+
+.node {
+    margin: 0.2em;
+    padding: 0.2em;
+    background: white;
+}
+
+.context {
+    gap: 0.1em;
+    flex-grow: 2;
+}
+
+.menu {
+	flex-grow: 1;
+	background: wheat;
+}
+
+code {
+    background-color: #707070;
+    color: white;
+    padding: 0.1em;
+}
+
+/*img {
+    width: 70%;
+    padding: 0.5em;
+    border: dotted;
+}*/
+
+.code {
+    background-color: #303030;
+    color: white;
+    padding: 0.1em;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+a {
+	color: black;
+	background-color: yellowgreen;
+	border-radius: 0.2em;
+	box-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 255);
+}

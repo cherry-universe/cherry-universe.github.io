@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link href="../../style/base.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+			<h1 class="title-style">
+				flatpak安装配置
+			</h1>
+		<div class="node">
+			<h3>安装</h3>
+			<p>Debian</p>
+			<code>[sudo] apt [-y] install flatpak</code>
+			<p>Ubuntu/Linux Mint</p>
+			<code>sudo apt install [-y] flatpak</code>
+			<p>Fedora</p>
+			<code>[sudo] dnf install [-y] flatpak</code>
+			<p>RHEL</p>
+			<code>搁服务器上装个屁flatpak</code>
+			<p>Arch Linux</p>
+			<code>[sudo] pacman -S flatpak</code>
+			<p>Gentoo/LFS/NixOS</p>
+			<code>我不信你不会装 <small style="color: black;">其实是我不会</small></code>
+			<p>FreeBSD/OpenBSD/NetBSD</p>
+			<code>不知道</code>
+			<p>MacOS</p>
+			<code>MacOS上装个屁 <small>非要装就用docker</small></code>
+			<p>Windows</p>
+			<code>你都用Windows了那你用个屁包管理器 <small>WSL可以装</small></code>
+			<p>Android</p>
+			<code>？？？ <small>可以用Termux proot</small></code>
+			<p>iOS/HarmonyOS</p>
+			<code>6</code>
+			<p>FreeRTOS</p>
+			<code>单片机别来碰瓷</code>
+			<p>作者用的操作系统</p>
+			<code>自带</code>
+			<strong>好的，那么现在我们安装完了flatpak，一起来看看怎么愉快(?)地使用吧:</strong>
+			<h3>镜像源配置</h3>
+			<code>flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo</code>
+			<code>flatpak remote-modify flathub --url=https://mirrors.ustc.edu.cn/flathub</code>
+			<h3>使用</h3>
+			<p>安装软件包</p><code>flatpak install [-y] flathub xxx</code>
+			<p>xxx是要安装软件包的名称。如果要安装某个冷门的软件包的话，你大概率会发出愉悦的尖锐爆鸣 <small>因为镜像站没缓存，直接给你重定向到flathub官网了</small></p>
+			<p>卸载软件包</p><code>flatpak uninstall [--delete-data] [-y]</code>
+			<p><code>--delete-data</code>是把用户数据一块删掉</p>
+			<p>卸载未使用的运行时</p><code>flatpak uninstall --unused</code>
+			<p>查看已安装的包列表</p><code>flatpak list</code>
+			<p>更新所有软件包</p><code>flatpak update</code>
+		</div>
+</body>
