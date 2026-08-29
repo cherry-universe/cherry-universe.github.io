@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>关于在html文件中显示纯代码的一种方法</title>
+	<link href="../../style/base.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<h1>关于在html文件中显示纯代码的一种方法</h1>
+	<div class="node column">
+		<p>
+			虽然个人博客有很多现成的框架，但是用这些框架的代价是丧失了一定的灵活性，也丧失了一定性能（？可能吧，不太了解）。
+			所以我打算自行编写博客的html, css源文件。至于为什么没有javascript--为了保证兼容性（？）。
+			刚开始做这个博客时就发现,&lt;和&gt;
+			无论是在&lt;code&gt;标签中还是在&lt;pre&gt;中都会被解析为html的元素，
+			这给我带来很大困扰。
+			比如说<code>#include &lt;iostream&gt;</code>就没办法正常显示。
+			在&lt;xmp&gt;中的&lt;和&gt;倒是能正常显示，但是它已经是被淘汰的用法了。
+			所以我写了个替换&lt;&gt;等字符为它们的转义字符的小脚本。
+			（就这么叫吧，虽然C++不算脚本，但是别的词放在这里总觉得别扭）
+		</p>
+		<iframe src="../../scripts/compile-cht.cc"></iframe>
+	<p>但是吧，问题又来了，这样子在编辑过程中页面中间我想要显示的其他语言代码容易造成IDE不识别这块代码后面的html标签，
+		没法自动补全。好一顿查找之后，我找到了&lt;iframe&gt;标签。该标签可在当前页面中嵌入另一个文档。
+		下面这段代码使用该标签嵌入：
+	</p>
+		<iframe src="iframe-example.txt"></iframe>
+		<p>嵌入的非.html扩展名的文件将会被原样显示。</p>
+		<p>.html文件将被浏览器解析:</p>
+		<iframe src="iframe-example.html"></iframe>
+		<p>.xml应该也会被解析，我将测试用的.html简单改为.xml后浏览器返回给我一个错误。</p>
+	</div>
+	<footer>
+	Copyright 2024-2026 cherry-universe All rights reserved.
+	</footer>
+</body>

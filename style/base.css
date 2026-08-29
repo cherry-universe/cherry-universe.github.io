@@ -2,16 +2,21 @@ body {
 	display: flex;
     	flex-direction: column;
      	gap: 0.1em;
-      	background: black;
+      background:repeating-linear-gradient(0deg,transparent 0 9px,#FFF 9px 10px),repeating-linear-gradient(90deg,transparent 0 9px,#FFF 9px 10px),linear-gradient(#fcc,#cfc,#ccf);
 }
 
 h1 {
 	border-style: solid;
     background: white;
+    border: dotted;
+    border-color: pink;
+    padding: 1em;
 }
 
 .node {
-    margin: 0.2em;
+    margin: 0.5em;
+    border: solid;
+    border-color: pink;
     padding: 0.2em;
     background: white;
 }
@@ -27,21 +32,33 @@ h1 {
 }
 
 code {
-    background-color: #707070;
-    color: white;
-    padding: 0.1em;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 0.1em;
+    border: solid;
+    margin: 0.1em;
+    padding: 0.2em;
+    border-width: thin;
 }
 
-/*img {
-    width: 70%;
-    padding: 0.5em;
-    border: dotted;
-}*/
-
 .code {
-    background-color: #303030;
-    color: white;
-    padding: 0.1em;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 0.1em;
+    border: solid;
+    margin: 0.1em;
+    padding: 0.2em;
+    border-width: thin;
+}
+
+iframe {
+	background-color: whitesmoke;
+	color: black;
+	border-radius: 0.1em;
+	border: solid;
+	margin: 0.1em;
+	padding: 0.2em;
+	border-width: thin;
 }
 
 .row {
@@ -49,9 +66,18 @@ code {
 	flex-direction: row;
 }
 
+.column {
+    display: flex;
+	flex-direction: column;
+}
+
 a {
 	color: black;
-	background-color: yellowgreen;
+	background-color: aqua;
 	border-radius: 0.2em;
 	box-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 255);
+}
+
+li {
+    padding: 0.2em;
 }
